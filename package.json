@@ -1,0 +1,15 @@
+{
+    "name": "thanh-thuy-portfolio",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "node scripts/build.mjs",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "sharp": "^0.34.2",
+        "vite": "^7.0.0"
+    }
+}
