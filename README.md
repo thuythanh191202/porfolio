@@ -26,3 +26,16 @@ Thư mục `dist/` là đầu ra sẵn sàng để deploy. Lệnh build sẽ:
 
 Các ảnh gốc trong `imgs/` không bị thay đổi. Khi thêm ảnh mới, chỉ cần đặt ảnh vào
 `imgs/`, tham chiếu bằng đường dẫn tương đối trong `index.html`, rồi build lại.
+
+## Build và deploy bằng VS Code
+
+Nhấn `Ctrl+Shift+B` trong VS Code để chạy task mặc định:
+
+1. đồng bộ dependency chính xác theo `package-lock.json`;
+2. build website và tối ưu ảnh vào `dist/`;
+3. tự động stage và commit toàn bộ thay đổi;
+4. push nhánh hiện tại lên GitHub.
+
+Sau khi nhánh `main` được push, workflow `.github/workflows/deploy-pages.yml` sẽ
+build lại và deploy `dist/` lên GitHub Pages. Lần đầu sử dụng, vào repository
+**Settings → Pages → Build and deployment → Source** và chọn **GitHub Actions**.
